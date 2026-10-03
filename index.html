@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,278 +10,340 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- MUSIC -->
-  <audio id="music" loop>
+  <audio id="bgMusic" loop>
     <source src="assets/audio/a-touching-story.mp3" type="audio/mpeg">
   </audio>
 
-  <button class="music-control" id="musicBtn">♫</button>
-
+  <button id="musicBtn" class="music-btn">♫ Musik</button>
 
   <!-- OPENING -->
-  <section id="opening">
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">sebuah cerita kecil untuk seseorang</p>
 
-    <div class="flower one">✿</div>
-    <div class="flower two">❀</div>
-    <div class="flower three">♡</div>
+      <h1>A Little More<br>of Us ♡</h1>
 
-    <div class="opening-content">
-
-      <div class="tiny">
-        a little something for you
-      </div>
-
-      <h1>
-        A Little
-        <span>More of Us</span>
-      </h1>
-
-      <div class="for-name">
-        For Nanda ♡
-      </div>
-
-      <button class="begin-btn" id="beginBtn">
-        Begin our little story ♡
-      </button>
-
-    </div>
-
-  </section>
-
-
-  <!-- OUR BEGINNING -->
-  <section>
-
-    <div class="story">
-
-      <div class="chapter">
-        CHAPTER 01
-      </div>
-
-      <h2>
-        It started<br>
-        long before this.
-      </h2>
-
-      <img
-        src="assets/images/opening.jpg"
-        class="photo"
-        alt="Our memory"
-      >
-
-      <p class="story-text">
-        Somehow, after all these years, here we are.
-        Two people who have known each other for so long,
-        finally becoming something a little more.
+      <p class="subtitle">
+        Untuk Nanda, dari Daffa.
       </p>
 
+      <button id="beginBtn">
+        Mulai cerita kecil kita ♡
+      </button>
     </div>
-
   </section>
 
 
-  <!-- MEMORIES -->
-  <section id="memories">
+  <!-- CHAPTER 01 -->
+  <section class="chapter" id="story">
+    <p class="chapter-number">BAB 01</p>
 
-    <div class="memories">
+    <h2>Semua ini sebenarnya<br>dimulai jauh sebelum kita.</h2>
 
-      <div class="chapter">
-        CHAPTER 02
-      </div>
-
-      <h2 class="serif">
-        Little moments,<br>
-        that became memories.
-      </h2>
-
-      <div class="memory-grid">
-
-        <div class="memory memory-one">
-          <img src="assets/images/memory-01.jpg" alt="">
-          <p>one of my favorite moments.</p>
-        </div>
-
-        <div class="memory memory-two">
-          <img src="assets/images/memory-02.jpg" alt="">
-          <p>this one still makes me smile.</p>
-        </div>
-
-        <div class="memory memory-three">
-          <img src="assets/images/memory-03.jpg" alt="">
-          <p>a little moment worth keeping.</p>
-        </div>
-
-        <div class="memory memory-four">
-          <img src="assets/images/memory-04.jpg" alt="">
-          <p>and somehow, here we are.</p>
-        </div>
-
-      </div>
-
+    <div class="photo-frame">
+      <img src="assets/images/opening.jpg" alt="Kenangan kita">
     </div>
 
+    <div class="story-text">
+      <p>
+        Kalau dipikir-pikir, lucu juga ya.
+        Kita bukan dua orang asing yang tiba-tiba
+        dipertemukan oleh keadaan.
+      </p>
+
+      <p>
+        Kita sudah saling mengenal sejak lama.
+        Sudah ada di kehidupan masing-masing,
+        bahkan jauh sebelum akhirnya kita memutuskan
+        buat jalan bareng.
+      </p>
+
+      <p>
+        Dan sekarang, seseorang yang dulu cuma
+        menjadi bagian dari hari-hari biasa gua,
+        ternyata menjadi seseorang yang begitu berarti.
+      </p>
+
+      <p>
+        Mungkin memang ada hal-hal yang nggak perlu
+        buru-buru. Kadang, sesuatu yang sudah lama
+        ada di sekitar kita baru terasa istimewa
+        ketika kita mulai melihatnya dengan cara berbeda.
+      </p>
+    </div>
   </section>
 
 
-  <!-- ONE MONTH -->
-  <section>
+  <!-- CHAPTER 02 -->
+  <section class="memories" id="memories">
+    <p class="chapter-number">BAB 02</p>
 
-    <div class="timeline">
+    <h2>Hal-hal kecil yang<br>akhirnya jadi kenangan.</h2>
 
-      <div class="chapter">
-        ONE MONTH
+    <p class="section-description">
+      Nggak semuanya harus menjadi momen besar
+      untuk bisa diingat.
+    </p>
+
+    <div class="memory-grid">
+
+      <div class="memory-card">
+        <img src="assets/images/memory-01.jpg" alt="Kenangan pertama">
+        <p class="memory-caption">
+          Dari yang awalnya biasa aja,
+          sampai akhirnya jadi kita.
+        </p>
       </div>
 
-      <h2 class="serif">
-        30 days.<br>
-        A lot of little moments.
-      </h2>
+      <div class="memory-card">
+        <img src="assets/images/memory-02.jpg" alt="Kenangan bersama">
+        <p class="memory-caption">
+          Satu momen sederhana yang
+          ternyata gua simpan baik-baik.
+        </p>
+      </div>
 
-      <div class="timeline-list">
+      <div class="memory-card">
+        <img src="assets/images/memory-03.jpg" alt="Momen berdua">
+        <p class="memory-caption">
+          Nggak harus selalu sempurna,
+          yang penting kita menikmatinya.
+        </p>
+      </div>
 
-        <div class="event">
-          <small>THE BEGINNING</small>
-          <h3>Something changed.</h3>
-
-          <p>
-            The moment when everything started
-            feeling a little different.
-          </p>
-        </div>
-
-        <div class="event">
-          <small>OUR LITTLE MOMENTS</small>
-          <h3>Then came the memories.</h3>
-
-          <p>
-            The conversations, laughs, random moments,
-            and everything in between.
-          </p>
-        </div>
-
-        <div class="event">
-          <small>TODAY</small>
-          <h3>One month with you ♡</h3>
-
-          <p>
-            And somehow, one month already passed.
-          </p>
-        </div>
-
+      <div class="memory-card">
+        <img src="assets/images/memory-04.jpg" alt="Kenangan lainnya">
+        <p class="memory-caption">
+          Dan masih banyak cerita
+          yang belum sempat kita buat.
+        </p>
       </div>
 
     </div>
+  </section>
 
+
+  <!-- TIMELINE -->
+  <section class="timeline" id="journey">
+    <p class="chapter-number">SATU BULAN KITA</p>
+
+    <h2>Sejauh ini,<br>dan masih terus berjalan.</h2>
+
+    <div class="timeline-item">
+      <span class="timeline-dot">♡</span>
+      <div>
+        <h3>Jauh sebelum kita</h3>
+        <p>
+          Dua orang yang sudah saling mengenal,
+          tanpa tahu kalau suatu hari ceritanya
+          akan sampai di titik ini.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot">♡</span>
+      <div>
+        <h3>Akhirnya, kita</h3>
+        <p>
+          Dari semua kemungkinan, kita akhirnya
+          memutuskan untuk mencoba menjalani
+          sesuatu yang baru bersama.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot">♡</span>
+      <div>
+        <h3>Satu bulan pertama</h3>
+        <p>
+          Masih banyak yang harus dipelajari,
+          masih banyak cerita yang menunggu,
+          dan masih banyak hal yang ingin
+          gua jalani bareng lu.
+        </p>
+      </div>
+    </div>
   </section>
 
 
   <!-- LETTER -->
-  <section id="letter">
+  <section class="letter-section" id="letter">
+    <p class="chapter-number">SEBUAH SURAT</p>
 
-    <div class="letter-container">
+    <h2>Ada sesuatu yang<br>mau gua sampaikan.</h2>
 
-      <div class="chapter">
-        A LETTER FOR YOU
+    <p class="letter-hint">
+      Coba buka surat kecil ini ♡
+    </p>
+
+    <div class="envelope" id="envelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body">
+        <span>Untuk Nanda ♡</span>
       </div>
-
-      <h2 class="serif">
-        A few words,<br>
-        just for you.
-      </h2>
-
-      <div class="envelope" id="envelope">
-
-        <div class="seal">
-          ♡
-        </div>
-
-      </div>
-
-      <p>
-        Open my letter
-      </p>
-
-      <div class="letter-content" id="letterContent">
-
-        <h3>
-          Dear Nanda,
-        </h3>
-
-        <p>
-          Happy one month to us.
-        </p>
-
-        <p>
-          This month may be just one small chapter,
-          but I'm really grateful that I got to spend it
-          with you.
-        </p>
-
-        <p>
-          Thank you for all the little moments,
-          the conversations, the laughs, and simply
-          for being here.
-        </p>
-
-        <p>
-          I don't know what every chapter ahead
-          will look like, but I hope we get to
-          make many more memories together.
-        </p>
-
-        <div class="signature">
-          — Daffa ♡
-        </div>
-
-      </div>
-
     </div>
 
+    <div id="letterContent" class="letter-content">
+
+      <h2>Untuk Nanda,</h2>
+
+      <p>
+        Satu bulan mungkin terdengar sebentar.
+        Tapi buat gua, rasanya cukup banyak hal
+        yang berubah sejak kita akhirnya memutuskan
+        buat jalan bareng.
+      </p>
+
+      <p>
+        Lucunya, kita sebenarnya bukan dua orang
+        yang baru saling kenal. Kita sudah ada
+        di kehidupan masing-masing jauh sebelum
+        hubungan ini dimulai.
+      </p>
+
+      <p>
+        Gua tahu, selama kita bareng, mungkin gua
+        masih jauh dari apa yang lu harapkan.
+        Ada hal-hal yang mungkin belum bisa gua kasih,
+        ada perhatian yang mungkin masih kurang,
+        dan ada saat-saat di mana gua sendiri
+        bingung harus menunjukkan rasa sayang gua
+        seperti apa.
+      </p>
+
+      <p>
+        Kadang gua juga kepikiran kalau gua belum
+        bisa memberikan sesuatu yang benar-benar
+        berharga buat lu. Sampai ada saatnya gua
+        ngerasa belum menjadi cowok yang bisa
+        memberikan lebih.
+      </p>
+
+      <p>
+        Tapi gua nggak mau hubungan kita cuma
+        diukur dari apa yang bisa gua kasih sekarang.
+        Gua lebih pengen kita punya sesuatu
+        yang bisa kita bangun bareng.
+      </p>
+
+      <p>
+        Gua nggak janji bakal selalu jadi pasangan
+        yang paling sempurna. Gua masih belajar
+        buat lebih terbuka, lebih peka, lebih ngerti
+        lu, dan lebih bisa menunjukkan kalau
+        gua benar-benar peduli.
+      </p>
+
+      <p>
+        Kalau selama satu bulan ini ada sikap
+        atau perlakuan gua yang nggak sesuai
+        sama ekspektasi lu, gua minta maaf.
+      </p>
+
+      <p>
+        Bukan karena gua mau hubungan kita
+        dipenuhi kata maaf, tapi karena gua sadar
+        gua masih punya banyak hal yang harus
+        gua pelajari.
+      </p>
+
+      <p>
+        Gua juga pengen ngajak lu buat jalanin
+        semuanya pelan-pelan.
+      </p>
+
+      <p>
+        Belajar mengenal satu sama lain lebih jauh.
+        Belajar memahami cara kita masing-masing
+        dalam menunjukkan rasa sayang.
+        Belajar saling percaya.
+        Belajar ngomong kalau ada sesuatu yang
+        nggak kita suka, daripada menyimpannya sendiri.
+      </p>
+
+      <p>
+        Dan belajar untuk tetap memilih satu sama lain,
+        bahkan ketika hubungan ini nggak selalu
+        berjalan sesuai yang kita bayangkan.
+      </p>
+
+      <p>
+        Gua nggak tahu perjalanan kita nanti
+        bakal seperti apa.
+      </p>
+
+      <p>
+        Tapi untuk sekarang, gua senang karena
+        orang yang dulu cuma ada di sekitar
+        kehidupan gua, sekarang menjadi seseorang
+        yang bisa gua ajak berjalan bersama.
+      </p>
+
+      <p>
+        Terima kasih karena sudah memilih
+        untuk menjalani satu bulan ini sama gua.
+      </p>
+
+      <p>
+        Semoga setelah ini bukan cuma satu bulan
+        yang kita rayakan, tapi banyak hal kecil
+        yang bisa kita ingat dan bilang,
+        "ternyata kita sudah sejauh ini."
+      </p>
+
+      <p>
+        Mari jalan bareng-bareng.<br>
+        Pelan-pelan aja.<br>
+        Kita belajar sama-sama. ♡
+      </p>
+
+      <p class="letter-signature">
+        Happy 1st Month, Nanda.<br><br>
+        — Daffa
+      </p>
+
+    </div>
   </section>
 
 
   <!-- ENDING -->
-  <section id="ending">
+  <section class="ending" id="ending">
 
-    <div class="ending">
-
-      <img
-        src="assets/images/ending.jpg"
-        class="ending-photo"
-        alt="Our favorite memory"
-      >
-
-      <div class="chapter">
-        OUR FIRST MONTH
-      </div>
-
-      <h2>
-        Happy 1st Month,<br>
-        <span>Nanda ♡</span>
-      </h2>
-
-      <p>
-        And this is only the beginning.
-      </p>
-
-      <button class="replay" id="replayBtn">
-        ↻ Replay our story
-      </button>
-
+    <div class="ending-photo">
+      <img src="assets/images/ending.jpg" alt="Satu kenangan kita">
     </div>
 
-  </section>
+    <p class="eyebrow">untuk cerita yang masih panjang</p>
 
+    <h1>Selamat satu bulan,<br>Nanda ♡</h1>
+
+    <p>
+      Terima kasih sudah menjadi bagian
+      dari cerita gua.
+    </p>
+
+    <p>
+      Dan ini baru permulaan.
+    </p>
+
+    <p class="ending-signature">
+      — Daffa
+    </p>
+
+    <button id="replayBtn">
+      Baca lagi dari awal ♡
+    </button>
+
+  </section>
 
   <script src="script.js"></script>
 
