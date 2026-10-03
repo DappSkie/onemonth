@@ -1,75 +1,91 @@
-const music = document.getElementById("music");
-const beginBtn = document.getElementById("beginBtn");
+const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
+const beginBtn = document.getElementById("beginBtn");
+const replayBtn = document.getElementById("replayBtn");
 
 const envelope = document.getElementById("envelope");
 const letterContent = document.getElementById("letterContent");
 
-const replayBtn = document.getElementById("replayBtn");
+
+/* =========================
+   MUSIC
+========================= */
+
+let isPlaying = false;
+
+function playMusic() {
+  music.play()
+    .then(() => {
+      isPlaying = true;
+      musicBtn.textContent = "♫ Musik";
+      musicBtn.classList.add("playing");
+    })
+    .catch(() => {
+      console.log("Musik belum bisa diputar.");
+    });
+}
+
+function pauseMusic() {
+  music.pause();
+
+  isPlaying = false;
+
+  musicBtn.textContent = "♫ Musik";
+  musicBtn.classList.remove("playing");
+}
+
+musicBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    pauseMusic();
+  } else {
+    playMusic();
+  }
+});
 
 
 /* =========================
-   START STORY + MUSIC
+   BEGIN BUTTON
 ========================= */
 
 beginBtn.addEventListener("click", () => {
 
-  music.volume = 0.45;
+  playMusic();
 
-  music.play().catch(() => {});
-
-  musicBtn.classList.add("show");
-
-  document
-    .querySelector("#opening + section")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
+  document.getElementById("story").scrollIntoView({
+    behavior: "smooth"
+  });
 
 });
 
 
 /* =========================
-   MUSIC CONTROL
-========================= */
-
-musicBtn.addEventListener("click", () => {
-
-  if (music.paused) {
-
-    music.play();
-
-    musicBtn.textContent = "♫";
-
-  } else {
-
-    music.pause();
-
-    musicBtn.textContent = "🔇";
-
-  }
-
-});
-
-
-/* =========================
-   OPEN LETTER
+   ENVELOPE
 ========================= */
 
 envelope.addEventListener("click", () => {
 
-  letterContent.classList.toggle("show");
+  const isOpen = envelope.classList.contains("open");
 
-  if (letterContent.classList.contains("show")) {
+  if (!isOpen) {
+
+    envelope.classList.add("open");
 
     setTimeout(() => {
+      letterContent.classList.add("show");
 
-      letterContent.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+      setTimeout(() => {
+        letterContent.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 150);
 
-    }, 100);
+    }, 500);
+
+  } else {
+
+    envelope.classList.remove("open");
+    letterContent.classList.remove("show");
 
   }
 
@@ -87,4 +103,32 @@ replayBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 
+});
+
+
+/* =========================
+   FADE IN ON SCROLL
+========================= */
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
